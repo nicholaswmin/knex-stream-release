@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+  <h1>Check console</h1>
+
+  </body>
+
+  <script>
+    const xhr = new XMLHttpRequest()
+    xhr.addEventListener('load', err => {
+      if (xhr.status !== 200) {
+        console.error(`Error ${xhr.status}. Check your Internet connection and try again.`)
+      }
+
+      console.log('Response loaded!')
+    })
+
+    xhr.addEventListener('progress', e => {
+      console.log('refresh')
+    })
+
+    xhr.addEventListener('error', err => {
+      console.error('Error', err)
+    })
+
+    xhr.open('GET', `/events`, true)
+    xhr.send()
+  </script>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "knex-stream-release",
+  "version": "1.0.0",
+  "description": "Knex streams playground",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "heroku pg:killall --app bitpaper-api-stage && node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicholaswmin/knex-stream-release.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicholaswmin/knex-stream-release/issues"
+  },
+  "homepage": "https://github.com/nicholaswmin/knex-stream-release#readme",
+  "dependencies": {
+    "JSONStream": "^1.3.5",
+    "body-parser": "^1.15.1",
+    "compression": "^1.7.4",
+    "express": "^4.13.4",
+    "knex": "^0.21.3",
+    "pg": "^8.7.1",
+    "pg-query-stream": "^4.2.1"
+  }
+}
